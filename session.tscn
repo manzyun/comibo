@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/picture/deck.png" type="Texture" id=1]
+
+[node name="session" type="Node2D"]
+position = Vector2( -1, 2 )
+
+[node name="deck" type="Sprite" parent="."]
+position = Vector2( 510.333, 717 )
+scale = Vector2( 0.52963, 0.52963 )
+texture = ExtResource( 1 )
