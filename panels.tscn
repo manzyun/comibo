@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/picture/panels/01.png" type="Texture" id=1]
+[ext_resource path="res://src/panel/CollisionShape2D.gd" type="Script" id=2]
+[ext_resource path="res://src/panel/Sprite.vs" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 91.104, 96.1615 )
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -1.73679, -0.263224 )
+scale = Vector2( 0.1419, 0.149713 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+script = ExtResource( 2 )
+[connection signal="ready" from="CollisionShape2D" to="CollisionShape2D" method="_on_CollisionShape2D_ready"]
